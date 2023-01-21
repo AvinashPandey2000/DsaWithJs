@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="value" placeholder="Enter The value">
+    <input type="text" id="index" placeholder="Enter the index">
+
+    <button onclick="insert()" >INSERT IT !</button>
+
+    <div id="print"></div>
+
+
+
+    <script>
+        let data=[9,45,2,8,45,23,7,78,0,11,41,47];
+        let cdata=[];
+
+        function insert(){
+        
+
+            let val=document.getElementById('value').value;
+            let index=document.getElementById('index').value;
+
+            // Method 1
+        
+        // if(parseInt(index)!=0){
+        //     cdata.push(data.slice(0,index));    // slice method array ko splite kr deta hai 
+        // }
+        //     cdata.push(val);
+        //     cdata.push(data.slice(index));      
+
+
+          // Method 2
+        // for(let i=data.length-1;i>=0;i--){
+        //     if(i>=index){
+        //         data[i+1]=data[i];
+        //         if(i==index){
+        //             data[i]=val;
+        //         }
+        //     }
+        // } 
+
+            // Method 3
+        data.splice(index, 0 , val);                     //splice(insert_index   detele_index   insert_val)
+           
+        document.getElementById('print').innerHTML=data;
+
+        }
+ 
+
+    </script>
+</body>
+</html>

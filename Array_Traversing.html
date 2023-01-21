@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="element"  placeholder="Enter the index number">
+    <button onclick="getElement()"> Get Elemtt</button>    
+
+
+
+    <script>
+        let data=[9,45,2,8,45,23,7,78,0,11,41,47];
+        
+         // itterate all the array element
+         for(let i=0;i<data.length;i++){
+            document.write(` <br> Array ${i} = ${data[i]}  `);
+
+        }
+
+        function getElement(){
+
+        let el=document.getElementById('element').value;
+        if(el<data.length && typeof parseInt(el)=== "number"){
+            alert(data[el]);
+
+        }else{
+            alert('not a index value ');
+        } 
+        }
+
+       
+
+        
+        
+    </script>
+</body>
+</html>
